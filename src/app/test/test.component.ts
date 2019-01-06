@@ -34,8 +34,9 @@ export class TestComponent implements OnInit {
 
   public capture() {
      
-      var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 640, 480);
+      var context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 400, 480);
       this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
+      //this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
       //this.captures = this.canvas.nativeElement.toDataURL("image/png");
       console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',this.captures[0]);
       this.camera=false;
