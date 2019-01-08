@@ -25,11 +25,17 @@ export class TestComponent implements OnInit {
 
     public ngAfterViewInit() {
       if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) { 
-          navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+          navigator.mediaDevices.getUserMedia({ video: {facingMode: "environment"} }).then(stream => {
               this.video.nativeElement.srcObject = stream;
               this.video.nativeElement.play();
           });
       }
+
+//        var id =navigator.mediaDevices.enumerateDevices()
+//   .then(devices => devices.find(d => d.kind == "videoinput" &&
+//                                 d.label.indexOf("back") >= 0));
+
+//                                 console.log('@@@@@@',id);
   }
 
   public capture() {

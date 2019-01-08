@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
    this.router.navigate(['/test']);
   }
 
+  clickMe2(){
+    this.router.navigate(['/test2']);
+   }
+
 }
